@@ -1,5 +1,6 @@
 ![image](https://github.com/ydydydydydy/ApartDeal_miniproject/assets/140699908/b77c28f8-03df-42be-9a5c-a8d6af1957b6)
 
+![image](https://github.com/ydydydydydy/ApartDeal_miniproject/assets/140699908/0ac06a3e-2922-4dc6-b505-ce051031f0a6)
 
 ## 개요
 ApartDeal_Project는 500만 건의 전국 아파트 매매 거래 데이터를 통해 수도권 아파트 데이터를 분석한 프로젝트 입니다
