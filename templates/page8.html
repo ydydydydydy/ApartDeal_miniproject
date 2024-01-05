@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  margin: 0;
+  font-weight: 100;
+  font-size:20px;
+
+}
+
+body {
+  margin: 0;
+  font-family: 'Malgun Gothic';
+  font-weight: 100;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table {
+  width: 1500px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  color: #000000;
+}
+
+th {
+  text-align: left;
+}
+
+thead {
+
+}
+
+tbody {
+  tr {
+    &:hover {
+      background-color: rgba(255,255,255,0.3);
+    }
+  }
+  td {
+    font-weight: bold; 
+    position: relative;
+    background-color:#ffffff;
+    padding:10px;
+    &:hover {
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255,255,255,0.2);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+table {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+  margin-top: 150px;
+  text-align: center;
+  font-size:25px;
+}
+
+
+ul {
+    height: 300px;
+}
+h2 {
+  margin-top: 150px;
+  text-align: center;
+  font-size:35px;
+}
+
+#sidebar {
+    display: block;
+}
+
+</style>
+</head>
+
+<body>
+    <h2>8.팀원역할</h2>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <table border="1">
+        <tr align="center">
+            <td style="background-color: #bad9ec; width: 250px;">박희재(팀장)</td>
+            <td style="background-color: #bad9ec; width: 250px;">김성재</td>
+            <td style="background-color: #bad9ec; width: 250px;">김주현</td>
+            <td style="background-color: #bad9ec; width: 250px;">염다영</td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>데이터 시각화 (시도별 아파트 거래금액, 가장 비싼 아파트)</li>
+                    <li>프로젝트 목표 기획 및 스토리 설계</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>크롤링 (법정동 별 위도경동)</li>
+                    <li>데이터 수집 (시도별 평균임금, 법정동별 인구수)</li>
+                    <li>데이터 시각화 (시도별, 법정동별 그래프, 대한민국 히트맵)</li>
+                    <li>html (세부 페이지 작성) </li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>데이터 수집(OSIS,한국 부동산원)</li>
+                    <li>데이터 및 컬럼이름 통일화</li>
+                    <li>주제 및 목표 제시</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>html/css (웹페이지 설계 및 내용 작성)</li>
+                    <li>데이터 시각화 (아파트 년도별 거래금액)</li>
+                </ul>
+            </td>
+
+        </tr>
+    </table>
+</body>
+
+</html>

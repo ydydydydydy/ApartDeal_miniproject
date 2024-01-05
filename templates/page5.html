@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+table{
+            width: 600px;
+        }
+        h2 {
+          margin-top: 150px;
+          text-align: center;
+          font-size:35px;
+        }
+        
+        th {
+            font-size:25px; 
+            font-weight:800;
+            text-align: center;
+            height: 100px;
+        }
+        
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            width: 1000px;
+        }
+        
+        .bissanText {
+            font-size: 25px;
+            padding-bottom: 1em;
+        }
+        
+        tr.spaceUnder>td {
+          padding-bottom: 1em;
+        }
+p {
+    font-size:23px;
+}
+p1 {
+    font-size:27px;
+}
+
+#sidebar {
+    display: block;
+}
+        </style>
+        
+        
+        </head>
+        
+        <body>
+            <h2>5.분석 결과 시각화</h2>
+            <br><br>
+            <hr>
+        
+            <table>
+                <tr>
+                    <th colspan="3">우리가 취업하고 아파트를 어떤 지역 구하는 게 좋을까?</td>
+                </tr>
+        
+                <tr >
+        
+                    <td colspan="3" align="left">
+                        <p1 style="font-weight: 600;">■ 수도권으로 취업할 확률이 높음!!</p1>
+
+                        <p>1. 전체 일자리수는 경기도와 서울권에 41% 이상 집중이 되어 있다 »</p>
+                        <p>2. 개발자의 일자리 또한, 수도권에 몰려있음</p>
+                        <p>3. 시도 별 평균 연봉 또한, 서울 및 경기 쪽이 가장 높음 </p>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td rowspan="2"><img src="{{url_for('static', filename='sido_job.jpg')}}" alt="aaaaa" width="500px" height="400px"></td>
+                    <td rowspan="2"><img src="{{url_for('static', filename='sudoIT.jpg')}}" alt="aaaaa" width="200px" height="500px"></td></td>
+                    <td><img src="{{url_for('static', filename='sidoavg.jpeg')}}" alt="NA" width="600px" height="300px"></td></td>
+                    <tr>
+                        
+                        <td><img src="{{url_for('static', filename='pop_map.PNG')}}" alt="aaaa" width="300px" height="400px"></td></td>
+                    </tr>
+        
+                    
+                </tr>
+            </table>
+            <br><br><br><br><br><br><br><hr>
+            <table>
+        
+        
+                <tr><th colspan="2">But, 수도권은 아파트가 비싸다는 이미지가 있다!</th></tr>
+        
+                <tr>
+                    <td colspan="2">
+                        <p1>■ 전체적인 서울 및 경기의 아파트 거래 금액은 타 지역 대비 굉장히 높음</p1>
+                        <p>   1. 시도별 평균 거래금액 > 서울 및 경기 지역이 높음</p>
+                        <p>   2. 시도별 평수당 거래금액 > 서울 및 경기 지역이 높음</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><img src="{{url_for('static', filename='sido_avg2.jpg')}}" alt="" width="600px" height="450px"></td>
+                    <td><img src="{{url_for('static', filename='sido_avg3.jpg')}}" alt="" width="600px" height="450px"></td>
+                </tr>
+        
+                <tr>
+                    <td colspan="2">
+                       <p>3. (시도별 평균 거래금액 / 평균 연봉) 또한, 서울 지역은 평균 연봉 대비 14배에 가까움 </p>
+        
+        
+                   </td> 
+                </tr>
+                <tr>
+                    <td colspan="2"><img src="{{url_for('static', filename='sido_avg4.jpeg')}}" alt=""></td>
+                </tr>
+        
+            </table>
+        
+            <br><br><br><br><br><br><br><hr>
+        
+            <table>
+                <tr>
+                    <th colspan="3">그렇다면 수도권에는 정말 살 곳은 없나?</th>
+                </tr>
+        
+                <tr>
+                    <td colspan="3">
+                        <p> 1. 대한민국 서울의 평당 거래금액이 낮은 곳은?</p>
+                        <p> 2. 혼자 살기 좋은 15평으로 대입하여 금액을 계산</p>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td><img src="{{url_for('static', filename='sido_avg5.png')}}" alt="" height="300px" width="400px"></td>
+                    <td><img src="{{url_for('static', filename='sido_avg7.png')}}" alt="" height="300px" width="500px"></td>
+                    <td><img src="{{url_for('static', filename='sido_avg8.PNG')}}" alt="" height="300px" width="400px"></td>
+                </tr>
+            </table>
+        
+         
+            <br><br><br><br><br><br><br><br><br><hr>
+        
+            <table>
+                <tr><th>
+                    해당 동들의 2024년 가격은 어느정도?
+                </th></tr>
+                <tr align="center">
+                    <td>
+                        <p style="text-align: left;">■ 년도별 평균 11.6% 상승</p>
+                        <p style="text-align: left;"> 1. 해당 데이터를 기반한 2024년도 예상 가격</p>
+                    </td>
+                </tr>
+        
+                <tr align="center">
+                    <td><img src="{{url_for('static', filename='sido_avg9.jpg')}}" alt=""></td>
+                </tr>
+        
+                <tr align="center">
+                    <td>
+                        <img src="{{url_for('static', filename='sido_avg10.jpg')}}" alt="">
+                    </td>
+                </tr>
+        
+            </table>
+        
+            <br><br><br><br><br><br><br><br><br><hr>
+        
+            <table>
+                <tr>
+                    <th>우리(개발자)의 예상 초봉으로 해당 동들의 아파트를 사려면??</th>
+                </tr>
+        
+                <tr align="center">
+                    <td >
+                        <p> - 1년차 연봉 3411만원 (출처 : 잡플래닛)</p>
+                        <p> - 하위 5개동 15평형 2024년 평균 가격 > 2.54억</p>
+                        <p style="color: rgb(237, 0, 0);
+                                    font-size: 20px;
+                                    font-weight: bold;" >
+                            약 7.5년동안 숨만 쉬고 모아야 한다...</p>
+                    </td>
+                    <tr align="center">
+                        <td>
+                            <img src="{{url_for('static', filename='sido_avg12.jpg')}}" alt="">
+                        </td>
+                    </tr>
+                <tr align="center">
+                    <td><img src="{{url_for('static', filename='Earning.jpg')}}" alt=""></td>
+                </tr>
+        
+            </table>
+            <hr>
+
+            <table>
+                <tr>
+                    <th>분석결과</th>
+                </tr>
+        
+                <tr align="center">
+                    <td >
+                            <p>▶ 일자리의 42%가 수도권에 몰려 있다</p>
+                            <p>▶ 수도권 아파트는 생각 했던 것 만큼 비싸다.</p>
+                            <p>▶ 서울안에서도 법정동별로 금액차이가 난다.</p>
+                            <p>▶ 대출이나 집안의 도움없이는 아파트 구매가 힘들다.</p>
+                    </td>
+                </tr>
+
+            </table>
+        
+        
+        
+        
+            <br><br><hr><br><br><br>
+        
+            <div align="center">
+                <h1 style="font-size: 60px;">주제</h1>
+            </div>
+            <div align="center">
+                <p style="font-size: 40px;">우리나라에서 가장 비싼 아파트는??</p>         
+            </div>
+        
+            <br><br><br><br><br><br><br><br><br><hr>
+        
+        
+        
+            
+            <table>
+                <br><br>
+                <tr>
+                    <th colspan="2"  style="font-size: 50px;">가장 비싼 아파트는?</th>
+                </tr>
+                <tr >
+                    <td colspan="2">
+                        <p> ■ 부촌 한남동, 청담동</p>
+                        <p> - 아파트별 거래금액 평균은 다음과 같음</p>
+                        <p> - 상위 15개 아파트 중 60% 이상이 청담동 및 한남동에 몰려있음.</p>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td><img src="{{url_for('static', filename='sido_avg11.JPG')}}" alt="" height="700px" width="900px"></td>
+                    <td><img src="{{url_for('static', filename='sido_avg12.png')}}" alt="" height="500px"></td>
+                </tr>
+            </table>
+
+                <br><br><br><br><hr><br><br><br>
+        
+            <table>
+                <tr height="50px"></tr>
+                <tr>
+                    <th colspan="2"  style="font-size: 50px;">왜 거기가 제일 비싼가? - 한남동</th>
+                </tr>
+        
+                <tr  class="spaceUnder" >
+                    <td colspan="2" class="bissanText">
+                        <p style="font-weight: bold;">1. 배산 임수 </p>
+                        한남동은 지리적으로 북측에 남산이 위치했고, 
+                        남측으로 한강이 위치한 배산임수의 명당으로 손꼽힘
+                    </td>
+                </tr>
+        
+        
+        
+                <tr class="spaceUnder">
+                    <td colspan="2" class="bissanText" >
+                        <p style="font-weight: bold;">2. 문화의 중심지 </p>
+                        부자들은 트랜디한 문화∙예술 상업 등이 몰려 있는 지역을 선호한다.
+                        하나 금융연구소 자료에 따르면 2018년 부자들이 지출 규모를 늘리겠다고 
+                        답한 소비항목은 문화 및 레저 (73%) 로 여가생활을 즐기는데 많은 비용을 
+                        쓰고 싶어하는 것으로 나타났다
+                    </td>
+                </tr>
+        
+                <tr class="spaceUnder">
+                    <td colspan="2" class="bissanText">
+                        <p style="font-weight: bold;">3. 트렌디한 상권 </p>
+                        최근 서울 용산구 한남동은 핫플레이스로 뜨고 있는 지역이다. 
+                        한남동을 중심으로 이태원과 용산동, 한강로동을 중심으로 요식업과 
+                        문화∙예술 등의 트렌디한 상권들이 증가하고 있다.
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td class="bissanText">
+                        <a href="https://news.heraldcorp.com/view.php?ud=20180716000249">한남동의 장점</a></td>
+                </tr>
+        
+        
+                <tr height="50px"></tr>
+                <tr>
+                    <th colspan="2"  style="font-size: 50px;">왜 거기가 제일 비싼가? - 청담동</th>
+                </tr>
+        
+                <tr  class="spaceUnder" >
+                    <td colspan="2" class="bissanText">
+                        <p style="font-weight: bold;">1. 쇼핑의 메카 </p>
+                            부촌으로서 청담동의 위상을 증명하는 또다른 예로는 청담동 명품거리가 꼽힌다.
+                            샤넬, 루이비통, 구찌, 디올 등 클래식한 명품 브랜드 뿐 아니라, 일반 백화점에서는
+                            보기 어려운 크롬하츠, 사카이 등 신 명품 브랜드가 한데 어우러져 있어 구매력 높은
+                            강남의 이른바 '큰손'들 사이에서 쇼핑의 메카로 주목받고 있다.
+                    </td>
+                </tr>
+        
+        
+        
+                <tr class="spaceUnder">
+                    <td colspan="2" class="bissanText" >
+                        <p style="font-weight: bold;">2. 쾌적한 교통망 </p>
+                        사통팔달 쾌속 교통망도 가치를 더한다. 도산대로가 인접해 있어 강남 전역으로의 
+                        이동이 수월하고 테헤란로를 통한 업무 밀집지역인 잠실 역삼 교대 등지로의 출퇴근도
+                        우수하다. 또한 올림픽대로, 동부간선도로 등이 가깝고 청담대교, 영동대교 이용시
+                        강북 지역으로도 쉽게 오갈수 있다.
+                    </td>
+                </tr>
+        
+                <tr class="spaceUnder">
+                    <td colspan="2" class="bissanText">
+                        <p style="font-weight: bold;">3. 높은 문화 수준 생활 </p>
+                        연예기획사가 집적된 'K STAR ROAD'를 비롯 청담아트센터, 청담갤러리 등
+                        각종 갤러리가 위치해 있어 수준 높은 문화생활을 영위할 수 있다는 점도 자산가들이
+                        청담동을 선호하는 이유중 하나로 보인다.
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td class="bissanText">
+                        <a href="https://www.g-enews.com/ko-kr/news/article/news_all/2022032815183275234e4869c120_1/article.html">청담동의 장점</a></td>
+                </tr>
+        
+        
+            </table>
+        
+        
+        
+        
+        </body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+h2 {
+  margin-top: 150px;
+  text-align: center;
+  font-size:35px;
+}
+.image {
+  text-align: center;
+  overflow: hidden;
+}
+
+.image img {
+    max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 너비로 설정 */
+    height: auto; /* 높이는 자동으로 조절되도록 설정 */
+    display: inline-block;  
+}
+
+div{
+    text-align: center;
+}
+
+#sidebar {
+    display: block;
+}
+
+</style>
+<body>
+    <h2>4.활용한 데이터</h2>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <div>
+        <img src="{{url_for('static', filename='data3.jpg')}}" alt="abcd" height="400px" width="1200px;">
+    </div>
+    <!-- <ol>
+        <li>구별 범죄수: 1000건</li>
+        <li>구별 아파트 거래금액, 거래량: 500건(크롤링활용)</li>
+        <li>구별 평당가</li>
+        <li>컬럼구성
+            <img src="{{url_for('static', filename='data_desc.jpg')}}" alt="데이터컬럼" />
+        </li>
+    </ol> -->
+</body>
+</html>

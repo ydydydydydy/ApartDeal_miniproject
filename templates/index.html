@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+
+              /* 사이드바 스타일 */
+#sidebar {
+  width: 50%;
+  margin: 0 auto; /* 가운데 정렬을 위한 margin 설정 */
+  height: 10000px;
+  overflow-y: hidden; /* 내용이 넘칠 경우 스크롤 바 표시 */
+  border-radius: 10px;
+  background-color: #FBF9E7;
+  margin-top: 200px;
+  border: 3px solid #0B2161;
+}
+
+#sidebar {
+  display: none;
+}
+
+
+#content {
+  width: 50%;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
+}     
+
+
+            * {
+              box-sizing: border-box;
+            }
+            
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+
+            }
+
+            /* Style the header */
+            .header {
+              padding: 13%;
+              height: 350px;
+              background-color: #f1f1f1;
+              text-align: center;
+              font-size: 35px;
+              background-image: url("{{url_for('static', filename='header9.png')}}");
+
+              background-size: cover; /* 이미지를 컨테이너에 맞추기 */
+              background-position: center; /* 이미지를 가운데 정렬 */
+            }
+            .row {
+              
+            padding-top: 2%;
+            padding-bottom: 2%;
+            padding-left: 18%;
+            padding-right: 18%;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* 요소를 수평으로 가운데 정렬 */
+
+            }
+            /* Create three equal columns that floats next to each other */
+            
+          .row::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 125%;
+            background: linear-gradient(45deg, #49a09d, #5f2c82);
+            z-index: -1; /* 배경을 내용 뒤로 이동 */
+          }
+            .column {
+            width: 18%;
+            margin-top: 40px;
+            margin-left: 30px;
+            margin-right: 30px; /* 조정된 간격 */
+            margin-bottom: 10px;
+            height: 250px;
+            border: 1px solid #b6b3b3;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            overflow: hidden;
+            clear: none;
+            }
+
+            .column.active {
+              opacity: 1;
+              transform: translateY(0);
+            }
+            
+            /* 마지막 column에는 오른쪽 마진을 적용하지 않도록 설정 */
+            .column:nth-child(4n) {
+            margin-right: 0;
+            clear: both; /* 4번째 column 다음에 새로운 줄을 시작합니다. */
+            }
+
+            .column:not(:nth-child(4n)) {
+              margin-right: 20px;
+            }
+
+            .column img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain; /* 이미지를 부모 요소에 맞춰 채우지 않고, 완전히 표시 */
+              display: block;
+              margin: 0 auto;
+              padding: 3%;
+            }
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            .column:hover {
+            background-color: rgba(30, 25, 25, 0.5);
+            cursor: pointer;
+          }
+            .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            font-weight: bold; /* 텍스트 굵게 설정 */
+            font-size: 26px;
+            white-space: pre-line; /* 텍스트 줄 바꿈 조정 */
+            text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000; /* 검정색 테두리 설정 */
+          }
+
+          .column:hover .text-overlay {
+            opacity: 1;
+          }
+
+
+          .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+        }
+        .column:hover .text,
+        .column:hover .overlay {
+          opacity: 1;
+        }
+            /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+            @media (max-width: 600px) {
+              .column {
+                width: 100%;
+                margin-right: 0;
+                clear: both;
+              }
+            }
+
+            </style>
+    </head>
+    <body>
+
+        <div class="header">
+          <h2></h2>
+        </div>
+        
+        <div class="row">
+          <div class="column" data-page="{{url_for('page', name='1')}}">
+            <div class="text-overlay">1.분석목표</div>
+            <img src="{{url_for('static', filename='property.png')}}" alt="Property Image">
+          </div>
+          <div class="column" data-page="{{url_for('page', name='2')}}">
+            <div class="text-overlay">2.분석방법</div>
+            <img src="{{url_for('static', filename='method.png')}}" alt="Property Image">
+          </div>
+          <div class="column" data-page="{{url_for('page', name='3')}}">
+            <div class="text-overlay">3. 사용한 라이브러리</div>
+            <img src="{{url_for('static', filename='python.png')}}" alt="Property Image">
+          </div>
+          <div class="column" data-page="{{url_for('page', name='4')}}">
+            <div class="text-overlay">4. 활용한 데이터셋</div>
+            <img src="{{url_for('static', filename='data.png')}}" alt="Property Image">
+          </div>
+          <div class="column" data-page="{{url_for('page', name='5')}}">
+            <div class="text-overlay">5.분석결과 시각화</div>
+            <img src="{{url_for('static', filename='graph.png')}}" alt="Property Image">
+          </div>
+          <div class="column" data-page="{{url_for('page', name='6')}}">
+            <div class="text-overlay">6.분석결과 정리</div>
+            <img src="{{url_for('static', filename='result.png')}}" alt="Property Image">
+          </div>
+          <div class="column" data-page="{{url_for('page', name='7')}}">
+            <div class="text-overlay">7. 데이터 출처</div>
+            <img src="{{url_for('static', filename='reference.png')}}" alt="Property Image">
+          </div>
+          <div class="column" data-page="{{url_for('page', name='8')}}">
+            <div class="text-overlay">8.팀원역할</div>
+            <img src="{{url_for('static', filename='team5.png')}}" alt="Property Image">
+          </div>
+        </div>
+      </div>
+
+        <div id="sidebar">
+            <!-- 이 부분에 사이드바 내용이 들어갑니다. 초기에는 비어있음 -->
+        </div>
+          
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            const columns = document.querySelectorAll('.column');
+        
+            columns.forEach((column, index) => {
+              setTimeout(() => {
+                column.classList.add('active');
+              }, index * 200); // 각 요소에 대한 지연 시간 조절
+            });
+        
+            // a 태그 클릭 시 페이지로 이동하는 이벤트 리스너 추가
+            columns.forEach(column => {
+              column.addEventListener('click', function(event) {
+                event.preventDefault(); // 기본 이벤트(링크 이동) 막기
+                const page = column.getAttribute('data-page'); // 각 column에서 페이지 정보 가져오기
+                console.log('Clicked page:', page); // 콘솔에 클릭된 페이지 정보 출력
+                if (page) {
+                  loadPage(page); // loadPage 함수 호출
+                } else {
+                  console.error('Error: data-page attribute is missing or null.');
+                }
+              });
+            });
+          });
+        
+          function loadPage(page) {
+            console.log('Loading page:', page); // 콘솔에 로드된 페이지 정보 출력
+            // 클릭 시 sidebar에 페이지 내용을 표시
+            fetch(page)
+              .then(response => response.text())
+              .then(data => {
+                // 새로운 콘텐츠를 #sidebar 아래에 추가
+                const sidebar = document.getElementById('sidebar');
+                sidebar.innerHTML = data;
+        
+                // 페이지 로드 후 사이드바로 자동 스크롤
+                sidebar.scrollTop = 0;
+              })
+              .catch(error => console.error('Error fetching page:', error));
+          }
+
+          
+          
+        </script>
+    </body>
+</html>
