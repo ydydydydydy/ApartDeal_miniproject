@@ -23,7 +23,7 @@ ApartDeal_Project는 500만 건의 전국 아파트 매매 거래 데이터를 �
   
 ###### PPT 및 발표자료:
 
-* ppt: [[미니 프로젝트.pptx](https://github.com/ydydydydydy/ApartDeal_Project/files/13816193/default.pptx)](https://www.canva.com/design/DAF4zjUYmcs/vigplH5GpuPGwIhcB1rZcA/view?utm_content=DAF4zjUYmcs&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
+* ppt: [(https://github.com/ydydydydydy/ApartDeal_Project/files/13816193/default.pptx)](https://www.canva.com/design/DAF4zjUYmcs/vigplH5GpuPGwIhcB1rZcA/view?utm_content=DAF4zjUYmcs&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
 
 
 ## HOW TO USE
